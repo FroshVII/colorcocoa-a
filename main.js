@@ -1,5 +1,5 @@
 /* state variables */
-var site_type = 'dark';  // 'control'
+var site_type = 'dark';  // 'control' or 'dark'
 
 var cur_page = 'preface';
 
@@ -83,8 +83,8 @@ function nextPage() {
 		minipage.style.display = "none";
 				
 		// Record what information the user provided
-		su_nightly = document.forms['newsletter-form']['newsletter-checkbox'].checked ? 1 : 0;
-		su_sponsor = document.forms['sponsor-form']['sponsor-checkbox'].checked ? 1 : 0;
+		su_nightly = document.getElementById("ncb").checked ? 1 : 0;
+		su_sponsor = document.getElementById("scb").checked ? 1 : 0;
 		
 		// Setup the next page
 		genHash();
