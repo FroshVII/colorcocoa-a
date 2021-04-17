@@ -1,5 +1,5 @@
 /* state variables */
-var site_type = 'control';  // 'dark'
+var site_type = 'dark';  // 'control'
 
 var cur_page = 'preface';
 
@@ -58,8 +58,8 @@ function nextPage() {
 			permit_sale = 0;
 			
 			// Uncheck defaults
-			document.forms['newsletter-form']['newsletter-checkbox'].checked = false;
-			document.forms['sponsor-form']['sponsor-checkbox'].checked = false;
+			document.getElementById("ncb").checked = false;  // newsletter
+			document.getElementById("scb").checked = false;  // SPONSOR
 		} else {
 			permit_collect = 1;
 			permit_sale = 1;
